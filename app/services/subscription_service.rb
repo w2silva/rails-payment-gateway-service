@@ -1,11 +1,10 @@
 class SubscriptionService < BaseService
-  attr_accessor :user, :plan, :token, :subscription
+  attr_accessor :user, :plan, :token
 
   def initialize(user, plan, options = {})
     @user = user
     @plan = plan
     @token = options[:token]
-    @subscription = nil
   end
 
   # Execute all process that need for new subscription
@@ -20,7 +19,7 @@ class SubscriptionService < BaseService
     ActiveRecord::Connection.transaction do
       # Create a subscription remote and local
       create_gateway_subscription do |gateway_subscription| 
-        @subscription = create_subscription(
+        subscription = create_subscription(
           gateway_subscription: gateway_subscription
         )
       end
