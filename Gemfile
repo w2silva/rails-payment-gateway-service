@@ -54,11 +54,15 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails', '~> 3.6'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
   gem 'rails-controller-testing'
+  
+  # Install all spec gem that rspec module needs
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
+  end
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,4 +1,51 @@
 GIT
+  remote: https://github.com/rspec/rspec-core.git
+  revision: 77dbc84657c5dc45e07a7fe0f5b02b4caeb6c9ad
+  branch: master
+  specs:
+    rspec-core (3.9.0.pre)
+      rspec-support (= 3.9.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-expectations.git
+  revision: 75f5cc9cab09fd0728bcf95e26d2c4b46f73c466
+  branch: master
+  specs:
+    rspec-expectations (3.9.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.9.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-mocks.git
+  revision: 2aab10d3e7a9c1c500acd1e88a7a408670f8cc48
+  branch: master
+  specs:
+    rspec-mocks (3.9.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.9.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-rails.git
+  revision: 2d183ced23d2d41ec1ad28f0f5f0582712b01642
+  branch: master
+  specs:
+    rspec-rails (3.9.0.pre)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (= 3.9.0.pre)
+      rspec-expectations (= 3.9.0.pre)
+      rspec-mocks (= 3.9.0.pre)
+      rspec-support (= 3.9.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-support.git
+  revision: c69a231d7369dd165ad7ce4742e1a2e21e3462b5
+  branch: master
+  specs:
+    rspec-support (3.9.0.pre)
+
+GIT
   remote: https://github.com/stympy/faker.git
   revision: 3356fb09bd57b550906140b611e99911b76ec732
   branch: master
@@ -138,23 +185,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    rspec-core (3.8.2)
-      rspec-support (~> 3.8.0)
-    rspec-expectations (3.8.4)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.8.0)
-    rspec-mocks (3.8.1)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.8.0)
-    rspec-rails (3.8.2)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      railties (>= 3.0)
-      rspec-core (~> 3.8.0)
-      rspec-expectations (~> 3.8.0)
-      rspec-mocks (~> 3.8.0)
-      rspec-support (~> 3.8.0)
-    rspec-support (3.8.2)
     ruby_dep (1.5.0)
     rubyzip (1.2.3)
     sass (3.7.4)
@@ -220,7 +250,11 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.6, >= 5.1.6.1)
   rails-controller-testing
-  rspec-rails (~> 3.6)
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
   sass-rails (~> 5.0)
   selenium-webdriver
   simple_command
