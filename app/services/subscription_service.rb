@@ -34,7 +34,7 @@ class SubscriptionService < BaseService
     # Send details and create new subscription in the gateway
     #============================================
     def create_gateway_subscription
-      gateway_subscription = gateway.create_subscription!(
+      gateway_subscription = gateway.get_customer!(
         user: get_payment_gateway_user,
         plan: get_payment_gateway_plan,
         token: @token

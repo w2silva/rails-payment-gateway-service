@@ -9,4 +9,20 @@ class BaseService
   def self.call(*args)
     new(*args).call
   end
+
+  private
+
+    def stripe_gateway
+      @gateway ||= StripeGateway.new
+    end
+
+    def pagseguro_gateway
+      @gateway ||= PagseguroClient.new
+    end
+
+  protected 
+
+    def gateway
+      pagseguro_gateway
+    end
 end
